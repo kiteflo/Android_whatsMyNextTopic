@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">WhatsMyNextArticle</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">What\'s My Next Topic?</string>
     <string name="action_settings">Settings</string>
+    <string name="text_topic">Welches Thema soll ich in meinem nächsten JavaMagazin Artikel behandeln?</string>
+    <string name="text_thanx">Danke für Dein Feedback...unten siehst Du den jetzigen Stand der Abstimmung.</string>
+    <string name="topic1">Spring für Android</string>
+    <string name="topic2">Android UI Patterns</string>
+    <string name="topic3">Android Fragmente</string>
+    <string name="send">Absenden</string>
+
+    <string name="messageSelectTopic">Bitte Thema auswählen...</string>
 
 </resources>

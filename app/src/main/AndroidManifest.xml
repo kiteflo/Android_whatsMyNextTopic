@@ -4,11 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/WhatsMyNextArticleTheme" >
         <activity
             android:name="com.sbag.whatsmynextarticle.app.MainActivity"
             android:label="@string/app_name" >
