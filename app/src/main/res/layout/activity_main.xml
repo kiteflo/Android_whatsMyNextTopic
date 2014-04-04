@@ -29,30 +29,38 @@
             android:id="@+id/iv_twitter"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/twitter"
+            android:src="@drawable/twitter_selector"
             style="@style/activity_main_style_link_bar_item"
+            android:clickable="true"
+            android:onClick="onSelectTwitterButton"
             />
         <ImageView
             android:id="@+id/iv_facebook"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/facebook"
+            android:src="@drawable/facebook_selector"
             style="@style/activity_main_style_link_bar_item"
             android:layout_toRightOf="@id/iv_twitter"
+            android:clickable="true"
+            android:onClick="onSelectFacebookButton"
             />
         <ImageView
             android:id="@+id/iv_googleplus"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/googleplus"
+            android:src="@drawable/googleplus_selector"
             style="@style/activity_main_style_link_bar_item"
             android:layout_toRightOf="@id/iv_facebook"
+            android:clickable="true"
+            android:onClick="onSelectGooglePlusButton"
             />
         <ImageView
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:src="@drawable/jax_experimental"
-            android:layout_alignParentRight="true"/>
+            android:src="@drawable/jax_selector"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:onClick="onSelectJaxEnter"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -77,6 +85,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_buttonContainer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
@@ -106,7 +115,110 @@
             android:layout_below="@id/but_topic2"
             android:drawableLeft="@drawable/fragments_60"
             />
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_votingResult"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_authorContainer"
+        android:layout_marginBottom="60dp"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:id="@+id/ll_reference"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/spring_60"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/topic1_percentage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@color/brown"
+                android:layout_weight=".0"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/topic1_counterpercentage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#3000aeef"
+                android:layout_weight=".0"/>
+            <TextView
+                android:id="@+id/tv_topic1Percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/activity_main_style_percentage_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/uipatterns_60"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/topic2_percentage"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:background="@color/brown"
+                android:layout_weight=".0"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/topic2_counterpercentage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#3000aeef"
+                android:layout_weight=".0"/>
+            <TextView
+                android:id="@+id/tv_topic2Percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/activity_main_style_percentage_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/fragments_60"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/topic3_percentage"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:background="@color/brown"
+                android:layout_weight=".0"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/topic3_counterpercentage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#3000aeef"
+                android:layout_weight=".0"/>
+            <TextView
+                android:id="@+id/tv_topic3Percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/activity_main_style_percentage_text"/>
+        </LinearLayout>
     </LinearLayout>
 
     <Button
@@ -114,6 +226,13 @@
         style="@style/activity_main_style_vote_button"
         android:text="@string/send"
         android:onClick="vote"
+        />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/but_follow"
+        style="@style/activity_main_style_vote_button"
+        android:text="@string/follow"
+        android:onClick="onSelectTwitterButton"
         />
 
     <TextView

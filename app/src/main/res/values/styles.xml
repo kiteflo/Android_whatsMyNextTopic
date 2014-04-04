@@ -19,6 +19,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="activity_main_style_percentage_text">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
     <!-- topic button -->
     <style name="activity_main_style_topic_button">
         <item name="android:paddingLeft">8dp</item>
